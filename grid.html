@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="grid.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Apresentação sobre o Grid</h1>
+        <div id="team">
+          <h2>Equipe:</h2>
+          <p>Pedro, Rafael, Gabriel, Cauã, Thais, Emanuely</p>
+        </div>
+      </header>
+    </div>
+    <div class="explicacao">
+      <h3>Criando linhas e colunas</h3>
+    </div>
+    <div id="presentation">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+    <div class="paragrafo">
+      <p>
+        No Grid utilizamos propriedades row para linhas e column para colunas, e
+        temos uma propriedade para espaçamento:
+      </p>
+      <ul>
+        <li>Grid-template-columns</li>
+        <li>Grid-template-rows</li>
+        <li>Row-gap(espaçamento)</li>
+      </ul>
+      <p>Podemos definir tamanhos como por exemplo:</p>
+      <ul>
+        <li>Grid-template-columns: 1fr 1fr 1fr;</li>
+        <li>Grid-template-rows: 1fr 1fr;</li>
+        <li>Row-gap: 10px;</li>
+      </ul>
+    </div>
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Grid-area e Span</h3>
+      </div>
+      <p>
+        O grid-area e Span estão interligados, porque sem um ou outro, não tem
+        como ajustar a largura das colunas, para ajustar a largura, podemos usar
+        uma variedade de medidas, não é algo linear, exemplo:
+      </p>
+      <ul>
+        <li>Grid-area: 1 / 1 / span 2 / span 2;</li>
+      </ul>
+      <p>
+        Quando mexemos no segundo valor depois da barra é quando a mágica
+        acontece
+      </p>
+    </div>
+    <div id="span-container">
+      <div class="span-item item1">1</div>
+      <div class="span-item item2">2</div>
+      <div class="span-item item3">3</div>
+    </div>
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Z-index com Overlay</h3>
+      </div>
+      <p>
+        O z-index define a ordem de empilhamento de elementos posicionados
+        (absolute, relative, fixed, ou sticky). Quanto maior o z-index, mais
+        acima o elemento será renderizado na "pilha".
+      </p>
+      <ul>
+        <li>Z-index: 10;</li>
+      </ul>
+      <p>
+        Quanto maior o valor do z-index, mais "acima" na pilha de renderização o
+        elemento fica. Isso significa que ele será desenhado por cima de
+        elementos com z-index menor.
+      </p>
+    </div>
+    <div id="zin">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="overlay">Overlay por cima do Grid</div>
+    </div>
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Grid-auto-rows</h3>
+      </div>
+      <ul>
+        <li>Grid-auto-rows: 100px;</li>
+      </ul>
+      <p>
+        A propriedade grid-auto-rows define a altura das linhas que o grid cria
+        automaticamente, ou seja, quando não são especificadas manualmente com
+        grid-template-rows.
+      </p>
+    </div>
+    <div id="auto">
+      <div class="item-grid">1</div>
+      <div class="item-grid">2</div>
+      <div class="item-grid">3</div>
+      <div class="item-grid">4</div>
+      <div class="item-grid">5</div>
+      <div class="item-grid">6</div>
+      <div class="item-grid">7</div>
+      <div class="item-grid">8</div>
+      <div class="item-grid">9</div>
+    </div>
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Grid-template-areas</h3>
+      </div>
+      <p>E é possível mudar o tamanho de cada célula separadamente.</p>
+      <ul>
+        <li>
+          Grid-templpate-areas: "header header header" "sidebar content ads"
+          "footer footer footer";
+        </li>
+      </ul>
+      <p>
+        A propriedade grid-template-areas cria uma "máscara" visual do layout,
+        usando nomes para as células.
+      </p>
+    </div>
+    <div id="template">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="content">Content</div>
+      <div class="ads">Ads</div>
+      <div class="footer">Footer</div>
+    </div>
+
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Justify-items</h3>
+      </div>
+      <ul>
+        <li>justify-items: start;</li>
+      </ul>
+      <p>
+        justify-items é uma propriedade do CSS Grid que define como cada item do
+        grid será alinhado horizontalmente dentro da sua própria célula.
+      </p>
+    </div>
+    <h4>justify-items: start</h4>
+    <div class="grid justify-start">
+      <div class="grid-justify-item small">1</div>
+      <div class="grid-justify-item small">2</div>
+      <div class="grid-justify-item small">3</div>
+    </div>
+
+    <h4>justify-items: center</h4>
+    <div class="grid justify-center">
+      <div class="grid-justify-item small">1</div>
+      <div class="grid-justify-item small">2</div>
+      <div class="grid-justify-item small">3</div>
+    </div>
+
+    <h4>justify-items: end</h4>
+    <div class="grid justify-end">
+      <div class="grid-justify-item small">1</div>
+      <div class="grid-justify-itemsmall">2</div>
+      <div class="grid-justify-item small">3</div>
+    </div>
+
+    <h4>justify-items: stretch</h4>
+    <div class="grid justify-stretch">
+      <div class="grid-justify-item">1</div>
+      <div class="grid-justify-item">2</div>
+      <div class="grid-justify-item">3</div>
+    </div>
+    <div class="paragrafo">
+      <div class="explicacao">
+        <h3>Auto-fill</h3>
+      </div>
+      <ul>
+        <li>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));</li>
+      </ul>
+      <p>
+        auto-fill: Gera automaticamente as colunas. minmax(200px, 1fr): Cada
+        coluna terá no mínimo 200px, mas pode crescer até 1fr (fração do espaço
+        restante).
+      </p>
+    </div>
+    <div class="grid-auto">
+      <div class="item-auto">1</div>
+      <div class="item-auto">2</div>
+      <div class="item-auto">3</div>
+      <div class="item-auto">4</div>
+      <div class="item-auto">5</div>
+      <div class="item-auto">6</div>
+    </div>
+  </body>
+</html>
